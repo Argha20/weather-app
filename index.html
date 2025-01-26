@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Here the Weather</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/images/clouds-and-sun.png"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+  </head>
+  <body>
+    <video
+      id="background_video"
+      class="background"
+      src=""
+      autoplay
+      muted
+      loop
+    ></video>
+    <div class="wrapper">
+      <!-- Navigation -->
+
+      <nav class="navbar">
+        <div
+          class="container d-flex gap-2 justify-content-center justify-content-lg-between"
+        >
+          <a class="navbar-brand" href="#">Here the Weather</a>
+          <div>
+            <form id="location_form" class="d-flex">
+              <input
+                class="form-control me-0 me-lg-2"
+                id="location_input"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button id="search" class="d-none" type="submit"></button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- Navigation End -->
+      <!-- weather card -->
+      <section class="weather-card">
+        <div class="container">
+          <div class="location_name">
+            <div class="logo_container">
+              <img src="./assets/images/clouds-and-sun.png" alt="logo" />
+            </div>
+            <div class="loc_con">
+              <h2 class="d-inline-block" id="location">Location</h2>
+              <span class="ms-3" id="country">Country</span>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="row g-3">
+              <div
+                class="col-lg-4 d-flex justify-content-between justify-content-lg-center align-items-center"
+              >
+                <div class="date-time">
+                  <div>
+                    <h3 id="time">00:00</h3>
+                    <p id="day_date">Day, 0 Month</p>
+                  </div>
+                  <div class="rise-set d-flex gap-3">
+                    <div class="rise">
+                      <img src="./assets/images/sun_rise.png" alt="rise" />
+                      <p id="sun_rise">00:00 am</p>
+                    </div>
+                    <div class="set">
+                      <img src="./assets/images/sun_set.png" alt="set" />
+                      <p id="sun_set">00:00 pm</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <div class="current-weather">
+                  <div class="feat-row">
+                    <div class="d-flex">
+                      <h3 class="current-temp d-inline-block" id="currentTemp">
+                        00
+                      </h3>
+                      <span class="fs-3 mt-2">&deg;c</span>
+                    </div>
+                    <h6 class="m-0 pt-4 pt-md-0">
+                      Feels like
+                      <p id="feelsLike">00.0</p>
+                      <span>&deg;c</span>
+                    </h6>
+                  </div>
+
+                  <div class="feat-row">
+                    <img
+                      id="currentConditonImg"
+                      class="static-icon"
+                      src=""
+                      alt="condition icon"
+                    />
+                    <h6 class="weather-condition fw-normal" id="currentConText">
+                      Mist
+                    </h6>
+                  </div>
+
+                  <div class="feat-row">
+                    <img
+                      class="static-icon"
+                      src="./assets/images/humidity.png"
+                      alt=""
+                    />
+                    <h6 class="weather-condition">
+                      RH
+                      <p id="currentHumidity">00</p>
+                    </h6>
+                  </div>
+
+                  <div class="feat-row">
+                    <img
+                      class="static-icon"
+                      src="./assets/images/storm.png"
+                      alt=""
+                    />
+                    <h6 class="weather-condition">
+                      WS
+                      <p id="currentWS">0.0</p>
+                      <span> km/h</span>
+                    </h6>
+                  </div>
+
+                  <div class="feat-row">
+                    <img
+                      class="static-icon"
+                      src="./assets/images/uv-index.png"
+                      alt=""
+                    />
+                    <h6 class="weather-condition">
+                      UVI
+                      <p id="currentUVI">0</p>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- weather card end -->
+
+      <!-- Forecast -->
+      <section class="forecast">
+        <div class="container">
+          <div class="row g-3 p-0 justify-content-lg-between">
+            <!-- Day wise cards 1 -->
+            <div class="col-6 col-lg-auto">
+              <div class="cast-card">
+                <h4>Tomorrow</h4>
+                <p class="cast-card-head" id="dayOneText">Patchy rain nearby</p>
+                <div class="d-flex justify-content-evenly align-items-center">
+                  <img
+                    id="dayOneImg"
+                    class="static-icon"
+                    src="./assets/images/143.png"
+                    alt="weather_img"
+                  />
+                  <p class="temperature" id="dayOneTemp">-27</p>
+                  <span class="mb-1 fs-4">&deg;c</span>
+                </div>
+                <div class="d-flex justify-content-between flex-nowrap mt-4">
+                  <div class="hight-low">
+                    <i class="fa-solid fa-temperature-arrow-up"></i>
+                    H : <span class="text-danger" id="dayOneHighTemp">28</span>
+                  </div>
+                  <div class="hight-low">
+                    <i class="fa-solid fa-temperature-arrow-down"></i>
+                    L : <span class="text-info" id="dayOneLowTemp">28</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Day wise cards end -->
+
+            <!-- Day wise cards 2 -->
+            <div class="col-6 col-lg-auto">
+              <div class="cast-card">
+                <h4 id="dayTwo">Day 2</h4>
+                <p class="cast-card-head" id="dayTwoText">Patchy rain nearby</p>
+                <div class="d-flex justify-content-evenly align-items-center">
+                  <img
+                    id="dayTwoImg"
+                    class="static-icon"
+                    src="./assets/images/143.png"
+                    alt="weather_img"
+                  />
+                  <p class="temperature" id="dayTwoTemp">-27</p>
+                  <span class="mb-1 fs-4">&deg;c</span>
+                </div>
+                <div class="d-flex justify-content-between flex-nowrap mt-4">
+                  <div class="hight-low">
+                    <i class="fa-solid fa-temperature-arrow-up"></i>
+                    H : <span class="text-danger" id="dayTwoHighTemp">28</span>
+                  </div>
+                  <div class="hight-low">
+                    <i class="fa-solid fa-temperature-arrow-down"></i>
+                    L : <span class="text-info" id="dayTwoLowTemp">28</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Day wise cards end -->
+
+            <!-- Day wise cards 3 -->
+            <div class="col-6 col-lg-auto">
+              <div class="cast-card">
+                <h4>Day 3</h4>
+                <p class="cast-card-head" id="dayThreeText">
+                  Patchy rain nearby
+                </p>
+                <div class="d-flex justify-content-evenly align-items-center">
+                  <img
+                    id="dayThreeImg"
+                    class="static-icon"
+                    src="./assets/images/143.png"
+                    alt="weather_img"
+                  />
+                  <p class="temperature" id="dayThreeTemp">-27</p>
+                  <span class="mb-1 fs-4">&deg;c</span>
+                </div>
+                <div class="d-flex justify-content-between flex-nowrap mt-4">
+                  <div class="hight-low">
+                    <i class="fa-solid fa-temperature-arrow-up"></i>
+                    H :
+                    <span class="text-danger" id="dayThreeHighTemp">28</span>
+                  </div>
+                  <div class="hight-low">
+                    <i class="fa-solid fa-temperature-arrow-down"></i>
+                    L : <span class="text-info" id="dayThreeLowTemp">28</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Day wise cards end -->
+
+            <!-- Day wise cards 4 -->
+            <div class="col-6 col-lg-auto">
+              <div class="cast-card">
+                <h4>Day 4</h4>
+                <p class="cast-card-head" id="dayFourText">
+                  Patchy rain nearby
+                </p>
+                <div class="d-flex justify-content-evenly align-items-center">
+                  <img
+                    id="dayFourImg"
+                    class="static-icon"
+                    src="./assets/images/143.png"
+                    alt="weather_img"
+                  />
+                  <p class="temperature" id="dayFourTemp">-27</p>
+                  <span class="mb-1 fs-4">&deg;c</span>
+                </div>
+                <div class="d-flex justify-content-between flex-nowrap mt-4">
+                  <div class="hight-low">
+                    <i class="fa-solid fa-temperature-arrow-up"></i>
+                    H : <span class="text-danger" id="dayFourHighTemp">28</span>
+                  </div>
+                  <div class="hight-low">
+                    <i class="fa-solid fa-temperature-arrow-down"></i>
+                    L : <span class="text-info" id="dayFourLowTemp">28</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Day wise cards end -->
+
+            <!-- Day wise cards 5 -->
+            <div class="col-6 col-lg-auto d-none d-lg-block">
+              <div class="cast-card">
+                <h4>Day 5</h4>
+                <p class="cast-card-head" id="dayFiveText">
+                  Patchy rain nearby
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <img
+                    id="dayFiveImg"
+                    class="static-icon"
+                    src="./assets/images/143.png"
+                    alt="weather_img"
+                  />
+                  <p class="temperature" id="dayFiveTemp">-27</p>
+                  <span class="mb-1 fs-4">&deg;c</span>
+                </div>
+                <div class="d-flex justify-content-between flex-nowrap mt-4">
+                  <div class="hight-low">
+                    <i class="fa-solid fa-temperature-arrow-up"></i>
+                    H : <span class="text-danger" id="dayFiveHighTemp">28</span>
+                  </div>
+                  <div class="hight-low">
+                    <i class="fa-solid fa-temperature-arrow-down"></i>
+                    L : <span class="text-info" id="dayFiveLowTemp">28</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Day wise cards end -->
+          </div>
+        </div>
+      </section>
+      <!-- Forecast end -->
+      <!-- Footer -->
+      <footer>
+        <div class="container d-flex justify-content-center">
+          <p>Designed By Arghadeep Roy</p>
+        </div>
+      </footer>
+      <!-- Footer end -->
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"
+      ></script>
+      <script src="./assets/js/script.js"></script>
+    </div>
+  </body>
+</html>

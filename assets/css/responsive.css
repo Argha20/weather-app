@@ -1,0 +1,82 @@
+@media only screen and (max-width: 768px) {
+  .navbar-brand {
+    font-size: 16px;
+    margin-right: 0;
+  }
+  .current-weather {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 12px;
+  }
+  .location_name h2 {
+    font-size: 27px;
+  }
+  .location_name img {
+    width: 41px;
+    height: 40px;
+  }
+  .rise-set img {
+    width: 58px;
+    height: 51px;
+  }
+  .date-time {
+    padding: 12px;
+  }
+  h3 {
+    font-size: 40px;
+  }
+  .date-time p {
+    font-size: 13px;
+  }
+  .current-temp {
+    font-size: 45px;
+  }
+  .static-icon {
+    width: 65px;
+    height: 63px;
+  }
+  .feat-row {
+    width: 46%;
+  }
+  .cast-card {
+    width: 100%;
+    padding: 10px;
+  }
+  .cards {
+    margin-top: 18px;
+  }
+  .background {
+    display: none;
+  }
+  body {
+    background: rgb(12, 97, 54);
+    background: linear-gradient(
+      14deg,
+      rgba(12, 97, 54, 0.8855917366946778) 21%,
+      rgba(27, 101, 189, 1) 95%
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+  }
+  .wrapper {
+    background: none;
+    height: 100%;
+  }
+  .cast-card-head {
+    margin-top: 4px;
+    font-size: 15px;
+  }
+  .weather-card {
+    margin-top: 0;
+  }
+  footer {
+    margin-top: 30px;
+  }
+  footer p {
+    font-size: 14px;
+  }
+  .fa-solid:before {
+    display: none;
+  }
+}

@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --font-heading: "Manrope", sans-serif;
+  --font-para: "Poppins", serif;
+  --font-brand: "Doto", sans-serif;
+}
+body {
+  background-color: #000000;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #000000;
+  background-blend-mode: multiply, multiply;
+  color: #fff;
+  font-family: var(--font-para);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+.btn {
+  background-color: #0f172ad1;
+  color: white;
+  border: 1px solid #0f172ad1;
+}
+.btn:hover {
+  background-color: transparent;
+  border: 1px solid #0f172ad1;
+}
+.form-control {
+  background-color: #ffffff38;
+  border: 1px solid #0f172ad1;
+}
+.form-control:focus {
+  outline: none !important;
+}
+.wrapper {
+  background: rgb(0 4 53 / 30%);
+  backdrop-filter: blur(5px);
+  /* -webkit-backdrop-filter: blur(5px); */
+  width: 100%;
+  height: 100vh;
+}
+.background {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.navbar-brand {
+  font-family: var(--font-brand);
+  color: #03d694;
+  font-size: 22px;
+  font-weight: 900;
+}
+.navbar-brand:hover {
+  color: white;
+}
+.location_name {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #0f172ad1;
+  backdrop-filter: blur(80px);
+  border-radius: 0.8rem;
+  padding-block: 10px;
+}
+.location_name h2 {
+  font-family: var(--font-para);
+  font-weight: 600;
+  font-size: 42px;
+  color: white;
+  text-align: center;
+  margin-bottom: 0;
+}
+.location_name img {
+  width: 62px;
+  height: 60px;
+}
+.loc_con {
+  margin: auto;
+}
+.logo_container {
+  padding-left: 10px;
+  padding-block: 5px;
+}
+h3 {
+  font-size: 60px;
+  font-family: var(--font-para);
+  margin-bottom: 0;
+}
+.current-temp {
+  font-size: 78px;
+}
+h3 span {
+  font-size: 25px;
+  font-weight: 400;
+}
+span {
+  color: #989898;
+}
+.weather-card {
+  margin-top: 65px;
+}
+.form-control {
+  min-width: 270px;
+}
+.cards {
+  margin-top: 23px;
+}
+.rise-set img {
+  width: 71px;
+  height: 73px;
+}
+.date-time {
+  background-color: #0f172ad1;
+  backdrop-filter: blur(80px);
+  border-radius: 0.8rem;
+  width: 100%;
+  height: -webkit-fill-available;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 25px;
+}
+.date-time h3 span {
+  font-size: 20px;
+  font-weight: 400;
+}
+.date-time p {
+  margin-bottom: 0;
+  margin-top: 8px;
+  font-size: 16px;
+}
+.date-time p span {
+  color: #989898;
+  font-size: 12px;
+}
+.current-weather {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #0f172ad1;
+  border-radius: 0.8rem;
+  padding: 25px;
+  box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(80px);
+}
+.static-icon {
+  width: 80px;
+  height: 80px;
+}
+.weather-condition {
+  margin-top: 0.8rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+.feat-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+}
+.feat-row p {
+  display: inline;
+  margin: 0;
+  font-weight: 400;
+  color: #989898;
+}
+.feat-row p span {
+  font-size: 12px;
+}
+
+/* forecast */
+.forecast {
+  margin-top: 22px;
+}
+.temperature {
+  font-size: 28px;
+  margin-bottom: 0;
+}
+.cast-card-head {
+  margin-top: 10px;
+  font-size: 17px;
+  font-family: var(--font-para);
+  font-weight: 300;
+}
+.cast-card {
+  background-color: #0f172ad1;
+  border-radius: 0.8rem;
+  padding: 25px;
+  box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(80px);
+  width: 240px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.cast-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+footer {
+  margin-top: 110px;
+}
+footer p {
+  font-size: 16px;
+  font-family: var(--font-para);
+  color: #ffffff8c;
+}
