@@ -1,4 +1,4 @@
-const apiKey = "afb5a236cd3f4190b0b65544252601";
+const apiKey = "6d2e81eef1e64bb8b42124400251002";
 const baseUrl = "https://api.weatherapi.com/v1";
 let searchbox = document.getElementById("location_input");
 const backgroundVideo = document.getElementById("background_video");
